@@ -10,7 +10,7 @@ const server = http.createServer(app);
 
 app.use(
  cors({
-  origin: ["http://localhost:3000", "server-socket-io.railway.internal"],
+  origin: ["server-socket-io.railway.internal"],
   methods: ["GET", "POST"],
   credentials: true,
  })
@@ -18,7 +18,7 @@ app.use(
 
 const io = new Server(server, {
  cors: {
-  origin: ["http://localhost:3000", "server-socket-io.railway.internal"],
+  origin: ["server-socket-io.railway.internal"],
  },
  methods: ["GET", "POST"],
 });
