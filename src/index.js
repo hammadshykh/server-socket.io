@@ -10,7 +10,10 @@ const server = http.createServer(app);
 
 app.use(
  cors({
-  origin: ["https://real-time-chat-socket-io.vercel.app"],
+  origin: [
+   "http://localhost:3000",
+   "https://real-time-chat-socket-io.vercel.app",
+  ],
   methods: ["GET", "POST"],
   credentials: true,
  })
@@ -18,7 +21,10 @@ app.use(
 
 const io = new Server(server, {
  cors: {
-  origin: ["https://real-time-chat-socket-io.vercel.app"],
+  origin: [
+   "http://localhost:3000",
+   "https://real-time-chat-socket-io.vercel.app",
+  ],
  },
  methods: ["GET", "POST"],
 });
